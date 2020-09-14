@@ -1,0 +1,38 @@
+body {
+  background: linear-gradient(45deg, #dce8f1 0%, #eef2f3 100%);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.shadowed {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+}
+
+.shadowed:hover {
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 1);
+}
+
+.link-none {
+  text-decoration: none;
+}
+
+.link-none:hover {
+  text-decoration: none;
+}
+
+.round {
+  border-radius: 50px;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #8e0e00 0%, #1f1c18 100%);
+}
+
+.gradient-footer {
+  background: linear-gradient(90deg, #1f1c18 0%, #8e0e00 100%);
+}
+
+.grading-box {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+}

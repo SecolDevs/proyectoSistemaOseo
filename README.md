@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# PROYECTO SISTEMA OSEO
+
+## Para Correrlo es Necesario ejecutar el comando
+
+### `npm install`
 
 ## Available Scripts
 
