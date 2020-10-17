@@ -1,48 +1,46 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import InfoContext from '../context/informacion/InfoContext'
+import Fade from 'react-reveal'
+import Loader from './Loader'
 import Titulo from './Titulo'
-import Construct from './Construct'
-import Inf1 from './info/inf1/Inf1'
-import Inf2 from './info/inf2/Inf2'
-import Inf3 from './info/inf3/Inf3'
 
 const Informacion = () => {
   // Procesar el id
   const { id } = useParams()
+  const [loading, setLoading] = useState(true)
 
-  const [component, setComponent] = useState()
-  const [titulo, setTitulo] = useState('')
+  const infoContext = useContext(InfoContext)
+  const { oneInfo, getOneInfo } = infoContext
 
   useEffect(() => {
-    switch (id) {
-      case '1':
-        setTitulo('QUE ES?')
-        setComponent(<Inf1 />)
-        break
-      case '2':
-        setTitulo('CARTILAGOS')
-        setComponent(<Inf2 />)
-        break
-      case '3':
-        setTitulo('ARTICULACIONES')
-        setComponent(<Inf3 />)
-        break
-      default:
-        setTitulo('PAGINA EN CONSTRUCCION')
-        setComponent(<Construct />)
-        break
+    const getData = async () => {
+      setLoading(true)
+      await getOneInfo(id)
+      setLoading(false)
     }
+    getData()
+    // eslint-disable-next-line
   }, [id])
-
   return (
-    <div className="mt-5">
-      <Titulo titulo={titulo} />
-      <div className="p-2">
-        <div className="shadow grading-box rounded-lg text-white p-2">
-          <div className="row">{component}</div>
-        </div>
-      </div>
-    </div>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Titulo titulo={oneInfo.titulo} />
+          <Fade>
+            <div className="p-2">
+              <div className="shadow bg-secondary rounded-lg p-2 container">
+                <div
+                  dangerouslySetInnerHTML={{ __html: oneInfo.content }}
+                ></div>
+              </div>
+            </div>
+          </Fade>
+        </>
+      )}
+    </>
   )
 }
 

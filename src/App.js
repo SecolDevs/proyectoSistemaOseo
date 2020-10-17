@@ -8,34 +8,40 @@ import Inicio from './routes/Inicio'
 import Info from './routes/Info'
 import Juegos from './routes/Juegos'
 import Videos from './routes/Videos'
+import InfoState from './context/informacion/InfoState'
+import VideoState from './context/video/VideoState'
 
 function App() {
   return (
-    <Router>
-      <Header />
+    <InfoState>
+      <VideoState>
+        <Router>
+          <Header />
 
-      <Switch>
-        <Route path="/video/:id">
-          <Video />
-        </Route>
-        <Route path="/informacion/:id">
-          <Informacion />
-        </Route>
-        <Route path="/juegos">
-          <Juegos />
-        </Route>
-        <Route path="/videos">
-          <Videos />
-        </Route>
-        <Route path="/info">
-          <Info />
-        </Route>
-        <Route path="/">
-          <Inicio />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
+          <Switch>
+            <Route path="/video/:id">
+              <Video />
+            </Route>
+            <Route path="/informacion/:id">
+              <Informacion />
+            </Route>
+            <Route path="/juegos">
+              <Juegos />
+            </Route>
+            <Route path="/videos">
+              <Videos />
+            </Route>
+            <Route path="/info">
+              <Info />
+            </Route>
+            <Route path="/">
+              <Inicio />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </VideoState>
+    </InfoState>
   )
 }
 

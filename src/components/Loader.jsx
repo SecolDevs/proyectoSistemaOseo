@@ -1,0 +1,19 @@
+import React from 'react'
+import './Loader.css'
+
+const Loader = () => {
+  return (
+    <div className="container vh-100">
+      <div className="sk-chase mt-5 mx-auto ">
+        <div className="sk-chase-dot"></div>
+        <div className="sk-chase-dot"></div>
+        <div className="sk-chase-dot"></div>
+        <div className="sk-chase-dot"></div>
+        <div className="sk-chase-dot"></div>
+        <div className="sk-chase-dot"></div>
+      </div>
+    </div>
+  )
+}
+
+export default Loader

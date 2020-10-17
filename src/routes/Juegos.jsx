@@ -4,11 +4,10 @@ import Construct from '../components/Construct'
 
 const Juegos = () => {
   return (
-    <div className="mt-5">
+    <>
       <Titulo titulo="JUEGOS" />
-        <Construct />
-      
-    </div>
+      <Construct />
+    </>
   )
 }
 

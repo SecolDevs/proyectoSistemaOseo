@@ -29,7 +29,7 @@ const Videos = () => {
   ]
 
   return (
-    <div className="mt-5 h-100">
+    <>
       <Titulo titulo="VIDEOS" />
       <div className="row p-3 mx-auto">
         <div className="card-deck">
@@ -46,7 +46,7 @@ const Videos = () => {
           ))}
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

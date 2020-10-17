@@ -35,7 +35,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://yordicoder.com/bocetarte/assets/images/user/QWE/4.png"
+            src="https://www.socam.yordicoder.com/public/sisos/assets/s5dlu68q39wso0wc"
             className="d-block w-100"
             alt="..."
             loading="lazy"

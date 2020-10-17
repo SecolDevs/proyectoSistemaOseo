@@ -3,10 +3,12 @@ import Fade from 'react-reveal'
 
 const Titulo = ({ titulo }) => {
   return (
-    <div className="text-center text-white gradient">
+    <div className="text-center gradient">
       <br />
       <Fade left>
-        <h1 className="font-weight-bolder">{titulo}</h1>
+        <strong>
+          <h1 className="font-weight-bolder text-white">{titulo}</h1>
+        </strong>
       </Fade>
       <br />
     </div>

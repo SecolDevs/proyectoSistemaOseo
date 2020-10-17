@@ -37,7 +37,7 @@ const Video = () => {
   `
 
   return (
-    <div className="mt-5">
+    <>
       <Titulo titulo={videos[id - 1].titulo} />
       <div className="container">
         <Frame>
@@ -50,7 +50,7 @@ const Video = () => {
           ></iframe>
         </Frame>
       </div>
-    </div>
+    </>
   )
 }
 

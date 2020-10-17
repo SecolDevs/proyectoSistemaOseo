@@ -20,9 +20,14 @@ const Card = ({ clase, titulo, enunciado, img, enlace, tipo, round }) => {
       <Fade bottom>
         <Link to={`${zelda}${enlace}`} className="link-none">
           <div
-            className={`shadowed ${round} link-none card text-dark bg-light text-center mb-3`}
+            className={`shadowed round link-none card text-primary border-danger text-center mb-3`}
           >
-            <img src={img} className="card-img-top" alt="..." loading="lazy" />
+            <img
+              src={img}
+              className="card-img-top round"
+              alt="..."
+              loading="lazy"
+            />
             <div className="card-body">
               <h3 className="card-title">{titulo}</h3>
               <p className="card-text">{enunciado}</p>
