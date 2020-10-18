@@ -6,9 +6,7 @@ const Titulo = ({ titulo }) => {
     <div className="text-center gradient">
       <br />
       <Fade left>
-        <strong>
-          <h1 className="font-weight-bolder text-white">{titulo}</h1>
-        </strong>
+        <h1 className="font-weight-bold text-white">{titulo}</h1>
       </Fade>
       <br />
     </div>
