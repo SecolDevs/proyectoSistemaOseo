@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(45deg, #dce8f1 0%, #eef2f3 100%);
   overflow-y: auto;

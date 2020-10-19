@@ -7,23 +7,25 @@ const Videos = () => {
   const informacion = [
     {
       titulo: 'Articulaciones del Cuerpo Humano',
-      enunciado: 'Este es el enunciado de Que es',
+      enunciado:
+        'La importancia de nuestras articulaciones y sus posibles patologías...',
       img:
-        'https://cdn.pixabay.com/photo/2020/05/25/08/46/the-dew-5217644_960_720.jpg',
+        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
       enlace: '1',
     },
     {
       titulo: 'Las Articulaciones',
-      enunciado: 'Enunciado Test',
+      enunciado:
+        '¿Qué son las articulaciones? Cantidad de articulaciones en el cuerpo humano. Tipos de articulaciones y mucho más...',
       img:
-        'https://cdn.pixabay.com/photo/2016/11/29/02/06/apiary-1866740_960_720.jpg',
+        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
       enlace: '2',
     },
     {
       titulo: 'Los Huesos Para Niños',
-      enunciado: 'Enunciado Test',
+      enunciado: 'En esta ocasión podrán aprender más sobre los huesos...',
       img:
-        'https://cdn.pixabay.com/photo/2020/05/25/08/46/the-dew-5217644_960_720.jpg',
+        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
       enlace: '3',
     },
   ]

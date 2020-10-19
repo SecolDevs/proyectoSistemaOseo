@@ -10,6 +10,7 @@ import Juegos from './routes/Juegos'
 import Videos from './routes/Videos'
 import InfoState from './context/informacion/InfoState'
 import VideoState from './context/video/VideoState'
+import Juego from './components/Juego'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <Header />
 
           <Switch>
+            <Route path="/juego/:id">
+              <Juego />
+            </Route>
             <Route path="/video/:id">
               <Video />
             </Route>

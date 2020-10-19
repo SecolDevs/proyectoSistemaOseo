@@ -10,14 +10,17 @@ const Video = () => {
     {
       titulo: 'Articulaciones del cuerpo humano',
       enlace: 'https://www.youtube.com/embed/6l-WwU5S-q4',
+      creditos: 'Hola',
     },
     {
       titulo: 'Las articulaciones',
       enlace: 'https://www.youtube.com/embed/Iduy7FYPbbc',
+      creditos: 'Mundo',
     },
     {
       titulo: 'Los huesos para niños',
       enlace: 'https://www.youtube.com/embed/qBNb8FwOlzQ',
+      creditos: 'Chao',
     },
   ]
 
@@ -49,6 +52,9 @@ const Video = () => {
             allowFullScreen
           ></iframe>
         </Frame>
+        <hr />
+        <h3>Creditos:</h3>
+        <p>{videos[id - 1].creditos}</p>
       </div>
     </>
   )

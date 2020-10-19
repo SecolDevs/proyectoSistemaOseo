@@ -20,7 +20,7 @@ const Card = ({ clase, titulo, enunciado, img, enlace, tipo, round }) => {
       <Fade bottom>
         <Link to={`${zelda}${enlace}`} className="link-none">
           <div
-            className={`shadowed round link-none card text-primary border-danger text-center mb-3`}
+            className={`shadowed round link-none card text-primary border-success text-center mb-3`}
           >
             <img
               src={img}
