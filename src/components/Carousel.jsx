@@ -20,7 +20,7 @@ const Carousel = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src="https://pixabay.com/get/57e6d6444b57b114f6df867ace2f357a083ed8e55053734e722772.jpg"
+            src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-skeleton-163715_960_720.jpg"
             className="d-block w-100"
             alt="..."
             loading="lazy"
