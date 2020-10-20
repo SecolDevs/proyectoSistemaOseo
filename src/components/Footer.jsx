@@ -13,7 +13,7 @@ const Footer = () => {
 
   return (
     <Fragment>
-      <div className="gradient-footer text-center">
+      <div className="gradient-footer mt-5 text-center">
         <Fade right>
           <br />
           <div className="row text-white">
@@ -42,7 +42,6 @@ const Footer = () => {
               <p>Grado 11-02</p>
             </div>
           </div>
-          <br />
         </Fade>
       </div>
     </Fragment>

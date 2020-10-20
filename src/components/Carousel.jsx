@@ -15,11 +15,12 @@ const Carousel = () => {
         ></li>
         <li data-target="#indicadores" data-slide-to="1"></li>
         <li data-target="#indicadores" data-slide-to="2"></li>
+        <li data-target="#indicadores" data-slide-to="3"></li>
       </ol>
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src="https://cdn.pixabay.com/photo/2019/04/28/23/10/fantasy-4164704_960_720.jpg"
+            src="https://pixabay.com/get/57e6d6444b57b114f6df867ace2f357a083ed8e55053734e722772.jpg"
             className="d-block w-100"
             alt="..."
             loading="lazy"
@@ -27,7 +28,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://cdn.pixabay.com/photo/2017/10/26/00/24/halloween-2889806_960_720.jpg"
+            src="https://www.socam.yordicoder.com/public/sisos/assets/75qryix8oxwkc8oc"
             className="d-block w-100"
             alt="..."
             loading="lazy"
@@ -35,7 +36,15 @@ const Carousel = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://www.socam.yordicoder.com/public/sisos/assets/s5dlu68q39wso0wc"
+            src="https://i.pinimg.com/originals/ea/cd/40/eacd40d540b7dc025f16101a0db6c4ae.jpg"
+            className="d-block w-100"
+            alt="..."
+            loading="lazy"
+          />
+        </div>
+        <div className="carousel-item">
+          <img
+            src="https://www.socam.yordicoder.com/public/sisos/assets/5tihilug3aosk84o"
             className="d-block w-100"
             alt="..."
             loading="lazy"

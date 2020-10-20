@@ -4,6 +4,7 @@ import InfoContext from '../context/informacion/InfoContext'
 import Fade from 'react-reveal'
 import Loader from './Loader'
 import Titulo from './Titulo'
+import ErrorAlert from './ErrorAlert'
 
 const Informacion = () => {
   // Procesar el id
@@ -26,7 +27,7 @@ const Informacion = () => {
     <>
       {loading ? (
         <Loader />
-      ) : (
+      ) : oneInfo ? (
         <>
           <Titulo titulo={oneInfo.titulo} />
           <Fade>
@@ -39,6 +40,8 @@ const Informacion = () => {
             </div>
           </Fade>
         </>
+      ) : (
+        <ErrorAlert />
       )}
     </>
   )

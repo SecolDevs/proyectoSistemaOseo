@@ -11,6 +11,7 @@ import Videos from './routes/Videos'
 import InfoState from './context/informacion/InfoState'
 import VideoState from './context/video/VideoState'
 import Juego from './components/Juego'
+import Buscar from './routes/Buscar'
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/informacion/:id">
               <Informacion />
+            </Route>
+            <Route path="/buscar/:term">
+              <Buscar />
             </Route>
             <Route path="/juegos">
               <Juegos />

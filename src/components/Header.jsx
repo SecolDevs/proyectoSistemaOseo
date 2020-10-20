@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import InfoContext from '../context/informacion/InfoContext'
 import logo from '../logo.png'
@@ -6,6 +6,25 @@ import logo from '../logo.png'
 const Header = () => {
   const infoContext = useContext(InfoContext)
   const { informacion, loading, getInfo } = infoContext
+
+  const [busqueda, setBusqueda] = useState('')
+  const [disabled, setDisabled] = useState('disabled')
+
+  const handleChange = (e) => {
+    setBusqueda(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  useEffect(() => {
+    if (busqueda.trim() === '') {
+      setDisabled('disabled')
+    } else {
+      setDisabled('')
+    }
+  }, [busqueda])
 
   useEffect(() => {
     getInfo()
@@ -51,17 +70,25 @@ const Header = () => {
               INFORMACIÓN
             </a>
             <div className="dropdown-menu">
-              {loading
-                ? null
-                : informacion.map((info) => (
-                    <NavLink
-                      key={info.id}
-                      className="dropdown-item"
-                      to={`/informacion/${info.id}`}
-                    >
-                      {info.titulo}
-                    </NavLink>
-                  ))}
+              {loading ? (
+                <a href="#!" className="dropdown-item">
+                  Obteniendo Datos...
+                </a>
+              ) : informacion ? (
+                informacion.map((info) => (
+                  <NavLink
+                    key={info.id}
+                    className="dropdown-item"
+                    to={`/informacion/${info.id}`}
+                  >
+                    {info.titulo}
+                  </NavLink>
+                ))
+              ) : (
+                <a href="#!" className="dropdown-item">
+                  No Podemos Cargar la Informacion Solicitada
+                </a>
+              )}
             </div>
           </li>
           <li className="nav-item">
@@ -75,6 +102,21 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
+        <form className="form-inline my-2 my-lg-0" onSubmit={handleSubmit}>
+          <input
+            className="form-control mr-sm-2 rounded"
+            type="text"
+            placeholder="Busca un Tema"
+            value={busqueda}
+            onChange={handleChange}
+          />
+          <NavLink
+            className={`btn btn-danger my-2 my-sm-0 rounded ${disabled}`}
+            to={`/buscar/${busqueda}`}
+          >
+            Buscar
+          </NavLink>
+        </form>
       </div>
     </nav>
   )

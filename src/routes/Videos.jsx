@@ -1,52 +1,42 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import Titulo from '../components/Titulo'
 import Card from '../components/Card'
+import VideoContext from '../context/video/VideoContext'
+import Loader from '../components/Loader'
+import ErrorAlert from '../components/ErrorAlert'
 
 const Videos = () => {
-  // Crea el array de informacion
-  const informacion = [
-    {
-      titulo: 'Articulaciones del Cuerpo Humano',
-      enunciado:
-        'La importancia de nuestras articulaciones y sus posibles patologías...',
-      img:
-        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
-      enlace: '1',
-    },
-    {
-      titulo: 'Las Articulaciones',
-      enunciado:
-        '¿Qué son las articulaciones? Cantidad de articulaciones en el cuerpo humano. Tipos de articulaciones y mucho más...',
-      img:
-        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
-      enlace: '2',
-    },
-    {
-      titulo: 'Los Huesos Para Niños',
-      enunciado: 'En esta ocasión podrán aprender más sobre los huesos...',
-      img:
-        'https://cdn.pixabay.com/photo/2016/09/21/11/31/youtube-1684601_960_720.png',
-      enlace: '3',
-    },
-  ]
+  const videoContext = useContext(VideoContext)
+  const { videos, loadingV, getVideos } = videoContext
+
+  useEffect(() => {
+    getVideos()
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <>
       <Titulo titulo="VIDEOS" />
       <div className="row p-3 mx-auto">
-        <div className="card-deck">
-          {informacion.map((info) => (
-            <Card
-              key={info.enlace}
-              clase="col-lg-4"
-              titulo={info.titulo}
-              enunciado={info.enunciado}
-              img={info.img}
-              enlace={info.enlace}
-              tipo="video"
-            />
-          ))}
-        </div>
+        {loadingV ? (
+          <Loader />
+        ) : videos ? (
+          <div className="card-deck">
+            {videos.map((video) => (
+              <Card
+                key={video.enlace}
+                clase="col-lg-4"
+                titulo={video.titulo}
+                enunciado={video.enunciado}
+                img={video.cover.data.full_url}
+                enlace={video.id}
+                tipo="video"
+              />
+            ))}
+          </div>
+        ) : (
+          <ErrorAlert />
+        )}
       </div>
     </>
   )

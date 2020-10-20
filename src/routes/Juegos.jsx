@@ -10,14 +10,14 @@ const Juegos = () => {
       enunciado:
         'Aprende y descubre algunas curiosidades sobre el Sistema Óseo con este juego...',
       img:
-        'https://cdn.pixabay.com/photo/2018/09/05/06/19/signal-3655575_960_720.png',
+        'https://pixabay.com/get/57e4dd454352ab14f6da8c7dda29307c1236d9e7574c704f752c79d6914dcc5c_1280.png',
       enlace: '1',
     },
     {
       titulo: 'Partes del Sistema Óseo',
       enunciado: 'Descubre que hueso se encuentra atrás de la tarjeta...',
       img:
-        'https://cdn.pixabay.com/photo/2018/09/05/06/19/signal-3655575_960_720.png',
+        'https://pixabay.com/get/57e4dd454352ab14f6da8c7dda29307c1236d9e7574c704f752c79d6914dcc5c_1280.png',
       enlace: '2',
     },
     {
@@ -25,8 +25,23 @@ const Juegos = () => {
       enunciado:
         'Identifica la cantidad de huesos de cada parte del Sistema Óseo...',
       img:
-        'https://cdn.pixabay.com/photo/2018/09/05/06/19/signal-3655575_960_720.png',
+        'https://pixabay.com/get/57e4dd454352ab14f6da8c7dda29307c1236d9e7574c704f752c79d6914dcc5c_1280.png',
       enlace: '3',
+    },
+    {
+      titulo: 'Clasificación de los huesos',
+      enunciado:
+        'De acuerdo a las caracteristicas generales de su forma, identifica...',
+      img:
+        'https://pixabay.com/get/57e4dd454352ab14f6da8c7dda29307c1236d9e7574c704f752c79d6914dcc5c_1280.png',
+      enlace: '4',
+    },
+    {
+      titulo: 'Comprueba tus conocimientos',
+      enunciado: 'Responde las preguntas de acuerdo con la información...',
+      img:
+        'https://pixabay.com/get/57e4dd454352ab14f6da8c7dda29307c1236d9e7574c704f752c79d6914dcc5c_1280.png',
+      enlace: '5',
     },
   ]
 

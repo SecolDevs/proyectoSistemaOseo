@@ -1,4 +1,9 @@
-import { GET_INFO, GET_ONE_INFO } from '../../types'
+import {
+  GET_INFO,
+  GET_ONE_INFO,
+  MANAGE_LOADING,
+  SEARCH_DATA,
+} from '../../types'
 
 export default (state, action) => {
   switch (action.type) {
@@ -12,6 +17,16 @@ export default (state, action) => {
       return {
         ...state,
         oneInfo: action.payload,
+      }
+    case SEARCH_DATA:
+      return {
+        ...state,
+        sInfo: action.payload,
+      }
+    case MANAGE_LOADING:
+      return {
+        ...state,
+        loading: false,
       }
     default:
       return state
