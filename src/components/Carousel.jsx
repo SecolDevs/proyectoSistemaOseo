@@ -20,7 +20,7 @@ const Carousel = () => {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <img
-            src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-skeleton-163715_960_720.jpg"
+            src="https://www.socam.yordicoder.com/public/sisos/assets/k3eel9mp9ioskogc"
             className="d-block w-100"
             alt="..."
             loading="lazy"
@@ -28,7 +28,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://www.socam.yordicoder.com/public/sisos/assets/75qryix8oxwkc8oc"
+            src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-skeleton-163715_960_720.jpg"
             className="d-block w-100"
             alt="..."
             loading="lazy"
@@ -44,7 +44,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-item">
           <img
-            src="https://www.socam.yordicoder.com/public/sisos/assets/5tihilug3aosk84o"
+            src="https://www.socam.yordicoder.com/public/sisos/assets/7aidev2x5q0w0oww"
             className="d-block w-100"
             alt="..."
             loading="lazy"
