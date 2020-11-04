@@ -6,10 +6,12 @@ import Loader from '../components/Loader'
 import ErrorAlert from '../components/ErrorAlert'
 
 const Videos = () => {
+  // Extraccion del contexto
   const videoContext = useContext(VideoContext)
   const { videos, loadingV, getVideos } = videoContext
 
   useEffect(() => {
+    // Metodo del contexto para obtener todos los videos
     getVideos()
     // eslint-disable-next-line
   }, [])

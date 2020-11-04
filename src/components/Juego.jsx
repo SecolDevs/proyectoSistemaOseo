@@ -5,6 +5,7 @@ import Titulo from './Titulo'
 import ErrorAlert from './ErrorAlert'
 
 const Juego = () => {
+  // Extrae el id de la url
   const { id } = useParams()
 
   const Frame = styled.div`

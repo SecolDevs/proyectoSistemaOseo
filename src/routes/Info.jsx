@@ -4,7 +4,9 @@ import ErrorAlert from '../components/ErrorAlert'
 import Loader from '../components/Loader'
 import Titulo from '../components/Titulo'
 import InfoContext from '../context/informacion/InfoContext'
+
 const Info = () => {
+  // Extraccion del context
   const infoContext = useContext(InfoContext)
   const { informacion, loading } = infoContext
 

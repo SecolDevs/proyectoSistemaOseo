@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const Card = ({ clase, titulo, enunciado, img, enlace, tipo, round }) => {
   const [zelda, setZelda] = useState('')
 
+  // Verifica el tipo de la card y le asigna un prefijo al enlace
   useEffect(() => {
     if (tipo === 'video') {
       setZelda('/video/')

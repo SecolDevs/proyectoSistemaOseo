@@ -7,19 +7,25 @@ import Loader from './Loader'
 import ErrorAlert from './ErrorAlert'
 
 const Video = () => {
+  // Extraer el id de la url
   const { id } = useParams()
+
+  // Creacion del state
   const [loading, setLoading] = useState(true)
 
+  // Extraccion del contexto
   const videoContext = useContext(VideoContext)
   const { oneVideo, getOneVideo } = videoContext
 
   useEffect(() => {
+    // Obtiene un video por id con el metodo extraido del contexto, actualiza el state del loader
     const getVideo = async () => {
       setLoading(true)
       await getOneVideo(id)
       setLoading(false)
     }
 
+    // Ejecuta el metodo creado
     getVideo()
     // eslint-disable-next-line
   }, [id])

@@ -10,6 +10,7 @@ import {
 } from '../../types'
 
 const VideoState = (props) => {
+  // State inicial de videos
   const initialState = {
     videos: null,
     sVideo: [],
@@ -17,8 +18,10 @@ const VideoState = (props) => {
     oneVideo: null,
   }
 
+  // Extraccion del reducer de videos
   const [state, dispatch] = useReducer(VideoReducer, initialState)
 
+  // Obtener todos los videos desde la api y los pasa al dispatcher
   const getVideos = async () => {
     try {
       const res = await axiosClient.get('items/video?sort=titulo&fields=*.*')
@@ -32,6 +35,7 @@ const VideoState = (props) => {
     }
   }
 
+  // Obtener un video desde la api dependiendo el id
   const getOneVideo = async (id) => {
     try {
       const resultado = await axiosClient.get(`items/video/${id}?fields=*.*`)
@@ -44,6 +48,7 @@ const VideoState = (props) => {
     }
   }
 
+  // Obtener los videos desde la api dependiendo el termino
   const getSearchV = async (term) => {
     try {
       const res = await axiosClient.get(
@@ -58,12 +63,14 @@ const VideoState = (props) => {
     }
   }
 
+  // Administrar el state del loader de videos
   const manageLoading = () => {
     dispatch({
       type: MANAGE_LOADING_V,
     })
   }
 
+  // Pasa el state al contexto de la aplicacion
   return (
     <VideoContext.Provider
       value={{

@@ -4,21 +4,26 @@ import InfoContext from '../context/informacion/InfoContext'
 import logo from '../logo.png'
 
 const Header = () => {
+  // Extraccion del contexto
   const infoContext = useContext(InfoContext)
   const { informacion, loading, getInfo } = infoContext
 
+  // Creacion del state
   const [busqueda, setBusqueda] = useState('')
   const [disabled, setDisabled] = useState('disabled')
 
+  // Administra los cambios del input y los guarda en el state
   const handleChange = (e) => {
     setBusqueda(e.target.value)
   }
 
+  // Administrar el submit del formulario
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
   useEffect(() => {
+    // Habilita o deshabilita el boton si el input esta vacio
     if (busqueda.trim() === '') {
       setDisabled('disabled')
     } else {

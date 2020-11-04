@@ -7,22 +7,28 @@ import InfoContext from '../context/informacion/InfoContext'
 import VideoContext from '../context/video/VideoContext'
 
 const Buscar = () => {
+  // Creacion del state
   const [loading, setLoading] = useState(true)
 
+  // Extraccion del context de info
   const infoContext = useContext(InfoContext)
   const { sInfo, getSearchI } = infoContext
 
+  // Extraccion del context de video
   const videoContext = useContext(VideoContext)
   const { sVideo, getSearchV } = videoContext
 
+  // Extraccion del termino desde la url
   const { term } = useParams()
 
   useEffect(() => {
+    // Ejecuta el metodo para buscar por un termino, videos e informacion
     const getSearch = async () => {
       setLoading(true)
       await Promise.all([getSearchI(term), getSearchV(term)])
       setLoading(false)
     }
+    // Llamada al metodo creado
     getSearch()
 
     // eslint-disable-next-line

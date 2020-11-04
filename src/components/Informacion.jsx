@@ -11,10 +11,12 @@ const Informacion = () => {
   const { id } = useParams()
   const [loading, setLoading] = useState(true)
 
+  // Extraccion del contexto
   const infoContext = useContext(InfoContext)
   const { oneInfo, getOneInfo } = infoContext
 
   useEffect(() => {
+    // Llama al metodo de obtener la informacion mediante id y cambia el state del loader
     const getData = async () => {
       setLoading(true)
       await getOneInfo(id)

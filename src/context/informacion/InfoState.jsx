@@ -10,6 +10,7 @@ import {
 } from '../../types'
 
 const InfoState = (props) => {
+  // State inicial de informacion
   const initialState = {
     informacion: null,
     sInfo: [],
@@ -17,8 +18,10 @@ const InfoState = (props) => {
     oneInfo: null,
   }
 
+  // Extraccion de metodos del reducer
   const [state, dispatch] = useReducer(InfoReducer, initialState)
 
+  // Obtener toda la info desde el enpoint y pasarselo al dispatcher
   const getInfo = async () => {
     try {
       const res = await axiosClient.get('items/informacion?fields=*.*')
@@ -32,6 +35,7 @@ const InfoState = (props) => {
     }
   }
 
+  // Obtener la info de determinado contenido desde el enpoint y pasarselo al dispatcher
   const getOneInfo = async (id) => {
     try {
       const res = await axiosClient.get(`items/informacion/${id}?fields=*.*`)
@@ -44,6 +48,7 @@ const InfoState = (props) => {
     }
   }
 
+  // Obtener informacion desde determinado termino desde el enpoint y pasarselo al dispatcher
   const getSearchI = async (term) => {
     try {
       const res = await axiosClient.get(
@@ -58,12 +63,14 @@ const InfoState = (props) => {
     }
   }
 
+  // Administrar el estado de componente del loader inicial
   const manageLoading = () => {
     dispatch({
       type: MANAGE_LOADING,
     })
   }
 
+  // Pasamos piezas del state al contexto de la aplicacion
   return (
     <InfoContext.Provider
       value={{
